@@ -1,30 +1,33 @@
 import re
-import numpy as np
 
 re_inst = re.compile(r"(\D+) (\d+),(\d+) through (\d+),(\d+)")
 
-# 1st part
+def range2d(x0, y0, x1, y1):
+    return ((x, y) for x in range(x0, x1) for y in range(y0, y1))
 
-lights = np.zeros((1000, 1000), dtype=np.bool)
+lights = [[False] * 1000 for _ in range(1000)]
 for instruction in open("input.txt"):
     mo = re_inst.match(instruction)
     action = mo.group(1)
     x0, y0, x1, y1 = map(int, mo.group(2, 3, 4, 5))
-    region = lights[x0:x1+1, y0:y1+1]
+    region = range2d(x0, y0, x1 + 1, y1 + 1)
     if action == "turn on":
-        region[:] = 1
+        for x, y in region:
+            lights[x][y] = True
     elif action == "turn off":
-        region[:] = 0
+        for x, y in region:
+            lights[x][y] = False
     else:
-        region[:] = ~region
-print(lights.sum())
+        for x, y in region:
+            lights[x][y] = not lights[x][y]
+print(sum(map(sum, lights)))
 
 
 # 2nd part
 
 meaning = {"turn on": 1, "turn off": -1, "toggle": 2}
 
-lights = np.zeros((1000, 1000), dtype=np.int16)
+lights = np.zeros((1000, 1000), dtype=np.bool)
 for instruction in open("input.txt"):
     mo = re_inst.match(instruction)
     action = mo.group(1)
