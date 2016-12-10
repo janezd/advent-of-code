@@ -4,9 +4,17 @@ learning new languages or remembering those you've forgot.
 
 ### 2016
 
-I first implemented solutions in Python to find the correct answer and sometimes already to prototype the C-style solutions. Next I implemented the solution in C ... and finally changed this into code that runs on Arduino.
+I first implemented solutions in Python to find the correct answer and sometimes already to prototype the C-style solutions. Next I implemented the solution in C. Both serve mostly as preparation for the solution on Arduino.
 
-Arduino code requires a 7-segment LED display with 8-digits, except for tasks that output text, where I used a two-line LCD display. A speaker for sound effects is connected to pin 2.
+### 2016 - Arduino
+
+I challenged myself to solve the AoC on Arduino.
+
+I used a 7-segment LED display with 8-digits, except for tasks that output text, where I used a two-line LCD display. Both are connected to the usual pins. A speaker for sound effects is connected to pin 2.
+
+For most tasks, the input is fed via USB using different speeds that depend on how fast the Arduino can handle it, given the amount of processing it does on the fly. See `Serial.begin(speed)`.
+
+I added `.` at the end of most inputs since this is the only way to tell Arduino that the input is finished.
 
 I posted videos of Arduino solving tasks to [YouTube channel](https://www.youtube.com/playlist?list=PLm-JYoU3uw-aIWvjuzHk2KOQSjLQT6Ac-).
 
