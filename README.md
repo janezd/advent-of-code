@@ -2,6 +2,10 @@ My solutions of tasks in [Advent of Code](http://adventofcode.com), a set of
 programming exercises suitable for beginners (at least the first week or two),
 learning new languages or remembering those you've forgot.
 
+### 2017
+
+I decided to learn Kotlin. I solved the first few tasks in Python to find the correct answer first, but then decided I don't need this kind of cheating. The code is probably far from idiomatic. I tried to use functional style as often as possible (within my newbie limitations).
+
 ### 2016
 
 I first implemented solutions in Python to find the correct answer and sometimes already to prototype the C-style solutions. Next I implemented the solution in C. Both serve mostly as preparation for the solution on Arduino.
@@ -20,7 +24,7 @@ I posted videos of Arduino solving tasks to [YouTube channel](https://www.youtub
 
 ### 2015
 
-I started in several languages but didn't have time to proceed like this, so
+I started in several languages but didn't have time to continue like this, so
 most solutions are in Python. Some are interesting, though.
 See [Spherical horses in bash](https://github.com/janezd/advent-of-code/blob/master/2015/03%20Spherical%20horses/solution.sh) or some [nice solutions of Some Assembly Required](https://github.com/janezd/advent-of-code/tree/master/2015/07%20Some%20Assembly%20Required),
 for example.
